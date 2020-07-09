@@ -6,7 +6,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 //static const char *fonts[]          = { "-*-inconsolata-*-*-*-9-*-*-*-*-*-*-*-*" };
-static const char *fonts[]          = { "Ubuntu Mono:pixelsize=16" };
+static const char *fonts[]          = {"-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1", "Ubuntu Mono:pixelsize=16" };
 //static const char dmenufont[]       = "-*-inconsolata-*-*-*-9-*-*-*-*-*-*-*-*";
 static const char dmenufont[]       = "Ubuntu Mono:pixelsize=16";
 static const char col_gray1[]       = "#222222";
@@ -14,10 +14,11 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+static const char my_border[]       = "#ff6600";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_gray4, col_cyan,  my_border },
 };
 
 /* tagging */
@@ -30,8 +31,8 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",         NULL,    NULL,       0,            1,           -1 },
-	{ "Thunderbird",  "Mail",  NULL,       1 << 7,       0,           -1 },
-	{ "Slack",        "slack", NULL,       1 << 7,       0,           -1 },
+	{ "Thunderbird",  "Mail",  NULL,       1 << 8,       0,           -1 },
+	{ "Slack",        "slack", NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
